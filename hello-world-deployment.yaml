@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: apache
-        image: techdecipher/custom-apache:v1
+        image: techdecipher/custom-apache:v2
         ports:
         - containerPort: 80
