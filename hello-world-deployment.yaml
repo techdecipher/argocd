@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: apache
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-world
+      app: apache
   template:
     metadata:
       labels:
-        app: hello-world
+        app: apache
     spec:
       containers:
-      - name: hello-world
-        image: "k8s.gcr.io/echoserver:1.10"
+      - name: apache
+        image: httpd
         ports:
-        - containerPort: 8080
+        - containerPort: 80
